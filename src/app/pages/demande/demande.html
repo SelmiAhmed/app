@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button>
+ </ion-buttons>
+
+    <ion-title>Demande d'avance</ion-title>
+  
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+
+<ion-content>
+  <form *ngIf="employee"  >
+
+  <ion-item>
+  <ion-label>Matricule:</ion-label>{{employee[0]?.matricule}}
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Nom Prénom:</ion-label>{{employee[0]?.nom}}{{employee[0]?.prenom}}
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Numéro Carte:</ion-label>{{employee[0]?.numcarte}}
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Montant:</ion-label>
+  <ion-input  type="number"
+  ngModel
+  name="Montant"
+  required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Motif:</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">Avance Sur Salaire</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+
+  <ion-label>Description:</ion-label>
+  <ion-textarea class="val" placeholder="Raisons"></ion-textarea>
+</ion-item>
+<ion-item>
+
+<ion-button class="ion-button-class" color="success" shape="round" >  
+  <img class="icon-small" src="assets/ok.png">
+  Valider</ion-button>&nbsp;
+
+
+<ion-button  class="ion-button-class" color="danger" shape="round" >  
+  <img class="icon-small" src="assets/annuler.png">
+  Annuler</ion-button>&nbsp;
+</ion-item>
+
+
+
+</form>
+
+</ion-content>

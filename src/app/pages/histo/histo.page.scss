@@ -1,0 +1,65 @@
+$categories: (
+  ionic: var(--ion-color-primary),
+  angular: #ac282b,
+  communication: #8e8d93,
+  tooling: #fe4c52,
+  services: #fd8b2d,
+  design: #fed035,
+  workshop: #69bb7b,
+  food: #3bc7c4,
+  documentation: #b16be3,
+  navigation: #6600cc
+);
+ion-card.cardON {
+  background-color: #69bb7b;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 400px !important;
+  .msg {
+      background-color: #679cff;
+  }
+}
+ion-card.refus {
+  background-color: #ac282b;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 400px !important;
+  .msg {
+      background-color: #d4d4d4;
+  }
+}
+ion-card.wait {
+  background-color: #fed035;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 400px !important;
+  .msg {
+      background-color: #d4d4d4;
+  }
+}
+@each $track, $value in map-remove($categories) {
+  ion-item-sliding[track='#{$track}'] ion-label {
+    border-left: 2px solid $value;
+    padding-left: 10px;
+  }
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-image: #fff;
+border-radius: 2px;
+display: inline-block;
+height: 200px;
+padding-left: 1rem;
+padding-right: 1rem;
+position: relative;
+width: 330px;
+
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+
+.img{
+  size: 20px;
+}

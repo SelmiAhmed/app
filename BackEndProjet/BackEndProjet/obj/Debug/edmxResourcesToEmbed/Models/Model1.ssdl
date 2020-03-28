@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'Projet.dbo.DEMANDE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="DEMANDE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_EMPLOYE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MONTANT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MOTIF" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar(max)" />
+    <Property Name="STATUT" Type="varchar" MaxLength="50" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="DATE_DEMANDE" Type="date" />
+    <Property Name="DATE_VALIDATION" Type="date" />
+    <Property Name="DATE_EXECUTION" Type="date" />
+    <Property Name="CDATE" Type="date" />
+    <Property Name="UDATE" Type="date" />
+    <Property Name="CUSER" Type="varchar" MaxLength="50" />
+    <Property Name="UUSER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'Projet.dbo.EMPLOYE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="EMPLOYE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NOM" Type="varchar" MaxLength="50" />
+    <Property Name="PRENOM" Type="varchar" MaxLength="50" />
+    <Property Name="NUMCARTE" Type="varchar" MaxLength="50" />
+    <Property Name="CAPACITE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MATRICULE" Type="varchar" MaxLength="50" />
+    <Property Name="ENTREPRISE" Type="varchar" MaxLength="50" />
+    <Property Name="LOGINEMPLOYE" Type="varchar" MaxLength="50" />
+    <Property Name="LOGINEMPLOYEUR" Type="varchar" MaxLength="50" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="50" />
+    <Property Name="ADRESSE" Type="varchar(max)" />
+    <Property Name="CDATE" Type="date" />
+    <Property Name="CUSER" Type="varchar" MaxLength="50" />
+    <Property Name="UDATE" Type="date" />
+    <Property Name="UUSER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ProjetModelStoreContainer">
+    <EntitySet Name="DEMANDE" EntityType="Self.DEMANDE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DEMANDE].[ID] AS [ID], 
+    [DEMANDE].[ID_EMPLOYE] AS [ID_EMPLOYE], 
+    [DEMANDE].[MONTANT] AS [MONTANT], 
+    [DEMANDE].[MOTIF] AS [MOTIF], 
+    [DEMANDE].[DESCRIPTION] AS [DESCRIPTION], 
+    [DEMANDE].[STATUT] AS [STATUT], 
+    [DEMANDE].[LOGIN] AS [LOGIN], 
+    [DEMANDE].[DATE_DEMANDE] AS [DATE_DEMANDE], 
+    [DEMANDE].[DATE_VALIDATION] AS [DATE_VALIDATION], 
+    [DEMANDE].[DATE_EXECUTION] AS [DATE_EXECUTION], 
+    [DEMANDE].[CDATE] AS [CDATE], 
+    [DEMANDE].[UDATE] AS [UDATE], 
+    [DEMANDE].[CUSER] AS [CUSER], 
+    [DEMANDE].[UUSER] AS [UUSER]
+    FROM [dbo].[DEMANDE] AS [DEMANDE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMPLOYE" EntityType="Self.EMPLOYE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EMPLOYE].[ID] AS [ID], 
+    [EMPLOYE].[NOM] AS [NOM], 
+    [EMPLOYE].[PRENOM] AS [PRENOM], 
+    [EMPLOYE].[NUMCARTE] AS [NUMCARTE], 
+    [EMPLOYE].[CAPACITE] AS [CAPACITE], 
+    [EMPLOYE].[MATRICULE] AS [MATRICULE], 
+    [EMPLOYE].[ENTREPRISE] AS [ENTREPRISE], 
+    [EMPLOYE].[LOGINEMPLOYE] AS [LOGINEMPLOYE], 
+    [EMPLOYE].[LOGINEMPLOYEUR] AS [LOGINEMPLOYEUR], 
+    [EMPLOYE].[MOBILE] AS [MOBILE], 
+    [EMPLOYE].[ADRESSE] AS [ADRESSE], 
+    [EMPLOYE].[CDATE] AS [CDATE], 
+    [EMPLOYE].[CUSER] AS [CUSER], 
+    [EMPLOYE].[UDATE] AS [UDATE], 
+    [EMPLOYE].[UUSER] AS [UUSER]
+    FROM [dbo].[EMPLOYE] AS [EMPLOYE]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

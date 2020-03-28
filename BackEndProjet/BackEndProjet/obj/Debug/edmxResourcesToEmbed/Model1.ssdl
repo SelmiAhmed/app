@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DEMANDE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_EMPLOYE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MONTANT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="MOTIF" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar(max)" />
+    <Property Name="STATUT" Type="varchar" MaxLength="50" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="DATE_DEMANDE" Type="date" />
+    <Property Name="DATE_VALIDATION" Type="date" />
+    <Property Name="DATE_EXECUTION" Type="date" />
+    <Property Name="CDATE" Type="date" />
+    <Property Name="UDATE" Type="date" />
+    <Property Name="CUSER" Type="varchar" MaxLength="50" />
+    <Property Name="UUSER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EMPLOYE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NOM" Type="varchar" MaxLength="50" />
+    <Property Name="PRENOM" Type="varchar" MaxLength="50" />
+    <Property Name="NUMCARTE" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SALAIRE" Type="int" />
+    <Property Name="CAPACITE" Type="int" />
+    <Property Name="NBABSENCE" Type="int" />
+    <Property Name="MATRICULE" Type="varchar" MaxLength="50" />
+    <Property Name="ENTREPRISE" Type="varchar" MaxLength="50" />
+    <Property Name="LOGINEMPLOYE" Type="varchar" MaxLength="50" />
+    <Property Name="LOGINEMPLOYEUR" Type="varchar" MaxLength="50" />
+    <Property Name="MOBILE" Type="int" />
+    <Property Name="ADRESSE" Type="varchar(max)" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="CDATE" Type="date" />
+    <Property Name="CUSER" Type="varchar" MaxLength="50" />
+    <Property Name="UDATE" Type="date" />
+    <Property Name="UUSER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="ProjetModelStoreContainer">
+    <EntitySet Name="DEMANDE" EntityType="Self.DEMANDE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYE" EntityType="Self.EMPLOYE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,119 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Mon Historique</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button >
+        <span >Filter</span>
+        <span >
+          <ion-icon slot="icon-only" name="options"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar  placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+ <!-- <ion-card class="card">
+    <ion-card-header>
+      <ion-card-subtitle> </ion-card-subtitle>
+      <ion-card-title>Demande D'avance Num° 
+        <ion-avatar >
+          <img src="assets/ok.png">
+        </ion-avatar>      </ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>Description:</ion-label>&nbsp;
+      <i>Date:</i>&nbsp;
+     <i><b>Montant:</b></i> 
+     <ion-icon name="eye"></ion-icon>
+     <ion-icon name="download"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-subtitle> </ion-card-subtitle>
+      <ion-card-title>Demande D'avance Num° 
+        <ion-avatar >
+          <img src="assets/annuler.png">
+        </ion-avatar> 
+</ion-card-title>      
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-label>Description:</ion-label>&nbsp;
+      <i>Date:</i>&nbsp;
+     <i><b>Montant:</b></i> 
+     <ion-icon name="eye"></ion-icon>
+     <ion-icon name="download"></ion-icon>
+
+    </ion-card-content>
+  </ion-card>--> 
+  <div  *ngFor="let d of demandes" >
+  <ion-card  [class.cardON]="d.statut=='accepte'" [class.wait]="d.statut=='encours'" [class.refus]="d.statut=='refusee'" >
+    <ion-card-header  >
+        <ion-card-subtitle> </ion-card-subtitle>
+        <ion-card-title>Demande D'avance Num° <h1>{{d.id}}</h1> </ion-card-title>
+        <ion-button color="danger" size="small" (click)="alert(d)">    <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      
+</ion-card-header>
+<ion-card-content>
+  <h2>Motif:{{d.montant}}</h2>
+  <h3>Demande:{{d.statut}}</h3>
+
+</ion-card-content>
+     
+  </ion-card>
+ <!--<ion-card class="card"  >
+    <ion-card-header>
+      <ion-card-subtitle> </ion-card-subtitle>
+      <ion-card-title>Demande D'avance Num° </ion-card-title>      
+      <ion-avatar >
+        <img src="assets/wait.png">
+      </ion-avatar> 
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-label>Description:</ion-label>&nbsp;
+      <i>Date:</i>&nbsp;
+     <i><b>Montant:</b></i> 
+     <ion-icon name="eye"></ion-icon>
+     <ion-icon name="download"></ion-icon>
+
+    </ion-card-content>
+  </ion-card>--> 
+
+
+
+
+
+</div>
+</ion-content>
+

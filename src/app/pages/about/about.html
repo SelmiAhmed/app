@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/ionic-logo-white.svg" alt="ionic logo">
+  </div>
+  <div class="about-info">
+    <h4 class="ion-padding-start">Application DigiAvance</h4>
+
+    <p class="ion-padding-start ion-padding-end">
+      DigiAvance est une application de gestion des avances sur salaire.
+      Developpée avec Ionic Framework.
+    </p>
+   <a href="https://fr-fr.facebook.com/SocieteTunisiennedeBanquePageOfficielle/"> <img src="assets/facebook.png" alt="ionic logo"></a>
+   <a href="https://twitter.com/stb_labanque?lang=fr"> <img src="assets/twitter.png" alt="ionic logo"></a>
+    <a href="https://www.instagram.com/stbbank/"><img src="assets/instagram.png" alt="ionic logo"></a>
+    <a href="https://fr.linkedin.com/company/stb-bank"><img href=""><img src="assets/linkedin.png" alt="ionic logo"></a>
+    <a href="http://www.stb.com.tn/"> <img src="assets/www.png" alt="ionic logo"></a>
+
+  </div>
+</ion-content>

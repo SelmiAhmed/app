@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjetModelStoreContainer" CdmEntityContainer="ProjetEntities">
+    <EntitySetMapping Name="DEMANDE">
+      <EntityTypeMapping TypeName="ProjetModel.DEMANDE">
+        <MappingFragment StoreEntitySet="DEMANDE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_EMPLOYE" ColumnName="ID_EMPLOYE" />
+          <ScalarProperty Name="MONTANT" ColumnName="MONTANT" />
+          <ScalarProperty Name="MOTIF" ColumnName="MOTIF" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="STATUT" ColumnName="STATUT" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="DATE_DEMANDE" ColumnName="DATE_DEMANDE" />
+          <ScalarProperty Name="DATE_VALIDATION" ColumnName="DATE_VALIDATION" />
+          <ScalarProperty Name="DATE_EXECUTION" ColumnName="DATE_EXECUTION" />
+          <ScalarProperty Name="CDATE" ColumnName="CDATE" />
+          <ScalarProperty Name="UDATE" ColumnName="UDATE" />
+          <ScalarProperty Name="CUSER" ColumnName="CUSER" />
+          <ScalarProperty Name="UUSER" ColumnName="UUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYE">
+      <EntityTypeMapping TypeName="ProjetModel.EMPLOYE">
+        <MappingFragment StoreEntitySet="EMPLOYE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOM" ColumnName="NOM" />
+          <ScalarProperty Name="PRENOM" ColumnName="PRENOM" />
+          <ScalarProperty Name="NUMCARTE" ColumnName="NUMCARTE" />
+          <ScalarProperty Name="CAPACITE" ColumnName="CAPACITE" />
+          <ScalarProperty Name="MATRICULE" ColumnName="MATRICULE" />
+          <ScalarProperty Name="ENTREPRISE" ColumnName="ENTREPRISE" />
+          <ScalarProperty Name="LOGINEMPLOYE" ColumnName="LOGINEMPLOYE" />
+          <ScalarProperty Name="LOGINEMPLOYEUR" ColumnName="LOGINEMPLOYEUR" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="CDATE" ColumnName="CDATE" />
+          <ScalarProperty Name="CUSER" ColumnName="CUSER" />
+          <ScalarProperty Name="UDATE" ColumnName="UDATE" />
+          <ScalarProperty Name="UUSER" ColumnName="UUSER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

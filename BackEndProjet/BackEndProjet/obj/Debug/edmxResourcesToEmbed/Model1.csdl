@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEMANDE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ID_EMPLOYE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MONTANT" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MOTIF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="STATUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_DEMANDE" Type="DateTime" Precision="0" />
+    <Property Name="DATE_VALIDATION" Type="DateTime" Precision="0" />
+    <Property Name="DATE_EXECUTION" Type="DateTime" Precision="0" />
+    <Property Name="CDATE" Type="DateTime" Precision="0" />
+    <Property Name="UDATE" Type="DateTime" Precision="0" />
+    <Property Name="CUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EMPLOYE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NUMCARTE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SALAIRE" Type="Int32" />
+    <Property Name="CAPACITE" Type="Int32" />
+    <Property Name="NBABSENCE" Type="Int32" />
+    <Property Name="MATRICULE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ENTREPRISE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOGINEMPLOYE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOGINEMPLOYEUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="Int32" />
+    <Property Name="ADRESSE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CDATE" Type="DateTime" Precision="0" />
+    <Property Name="CUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UDATE" Type="DateTime" Precision="0" />
+    <Property Name="UUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="ProjetEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEMANDE" EntityType="Self.DEMANDE" />
+    <EntitySet Name="EMPLOYE" EntityType="Self.EMPLOYE" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+  </EntityContainer>
+</Schema>
